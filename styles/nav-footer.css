@@ -1,18 +1,17 @@
-@@ -1,54 +1,43 @@
+/* ჰედერის შავი ფონი */
 /* --- Header გასწორება --- */
-/* შავი ჰედერი */
 header {
     background-color: #000 !important;
     padding: 15px 0;
     width: 100%;
 }
 
+.logo a, #nav-list a {
 header .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between; /* ლოგო მარცხნივ, მენიუ მარჯვნივ */
-    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
@@ -20,10 +19,8 @@ header .container {
 #nav-list {
     display: flex !important; /* აიძულებს გვერდიგვერდ დგომას */
     flex-direction: row !important;
-    display: flex !important; /* ელემენტები ერთ ხაზზე */
     list-style: none;
     gap: 30px;
-    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -35,43 +32,51 @@ header .container {
     font-family: sans-serif;
 }
 
+/* ფუტერის სრული სტილი */
 .cart-link img {
     filter: invert(1);
     vertical-align: middle;
 }
 
 /* --- Footer გასწორება --- */
-/* შავი ფუტერი */
 footer {
     background-color: #000 !important;
     color: #fff !important;
-    padding: 50px 0;
     padding: 40px 0;
+    padding: 50px 0;
     text-align: center;
+    margin-top: 60px;
     margin-top: 80px;
 }
 
 .social-media {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
-    margin-bottom: 25px;
     margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .social-link {
-@@ -59,12 +48,6 @@ footer {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
+/* ხატულების გათეთრება */
 .social-link img {
+    filter: invert(1); 
     filter: invert(1);
 }
 
 .contact-info p {
+    font-size: 13px;
+    color: #ccc;
     color: #bbb;
     font-size: 14px;
     margin: 5px 0;
-.social-link img, .cart-link img {
-    filter: invert(1); /* ხატულების გათეთრება */
 }
