@@ -1,8 +1,11 @@
+// 1. პროდუქტების წამოღება JSON-იდან
 async function loadProducts() {
+    const container = document.getElementById('product-container');
     try {
-        const response = await fetch('products.json'); // Fetch API-ს გამოყენება
+        const response = await fetch('./products.json'); 
         const products = await response.json();
-        const container = document.getElementById('product-container');
+
+        container.innerHTML = ''; // "იტვირთება" ტექსტის წაშლა
 
         products.forEach(product => {
             const card = `
@@ -11,27 +14,35 @@ async function loadProducts() {
                     <h3>${product.name}</h3>
                     <p class="price">${product.price}</p>
                     <p class="rating">${product.rating}</p>
-                    <button class="button">დეტალურად</button>
+                    <button class="button" style="cursor: default;">დეტალურად</button>
                 </article>
             `;
             container.innerHTML += card;
         });
     } catch (error) {
-        console.error('Error loading products:', error);
+        console.error('Error:', error);
+        container.innerHTML = '<p>მონაცემების ჩატვირთვა ვერ მოხერხდა.</p>';
     }
 }
 
-loadProducts();
+// 2. ბურგერ მენიუს ფუნქციონალი
+const burger = document.getElementById('burger-icon');
+const navList = document.getElementById('nav-list');
 
-// Sticky Header ფუნქცია (სქროლვისას)
+if(burger) {
+    burger.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+}
+
+// 3. Sticky Header სქროლვისას
 window.onscroll = function() {
-    const header = document.querySelector("header");
+    const header = document.getElementById("main-header");
     if (window.pageYOffset > 50) {
-        header.style.position = "fixed";
-        header.style.top = "0";
-        header.style.width = "100%";
-        header.style.zIndex = "1000";
+        header.classList.add("sticky");
     } else {
-        header.style.position = "relative";
+        header.classList.remove("sticky");
     }
 };
+
+loadProducts();
