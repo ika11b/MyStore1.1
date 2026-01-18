@@ -1,73 +1,56 @@
-/* კალათის გვერდის მთავარი კონტეინერი */
+/* პროდუქტების საერთო კონტეინერი */
 .main-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    max-width: 1100px;
+    gap: 40px;
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 20px;
     align-items: flex-start;
 }
 
-/* პროდუქტების ბადე - ზუსტად 2 სვეტი */
-#product-container.product-cards {
+/* პროდუქტების ბადე - 2 სვეტი (რადგან გვერდით კალათაა) */
+.product-cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px;
+    gap: 20px;
     flex: 2;
 }
 
-/* პროდუქტის ბარათი - დიზაინის მიხედვით */
+/* პროდუქტის ბარათის სტილი (ნაცრისფერი ფონი და ზომები) */
 .product-card {
-    background-color: #D9D9D9 !important; /* ნაცრისფერი ფონი ფოტოს მიხედვით */
-    border-radius: 4px;
+    background-color: #e0e0e0 !important; /* დიზაინის ნაცრისფერი */
+    border-radius: 8px;
     padding: 15px;
     display: flex;
-    flex-direction: row; /* ტექსტი ფოტოს გვერდით */
     align-items: center;
     gap: 15px;
-    border: none;
     text-align: left;
 }
 
-/* ფოტოს ზომა ბარათში */
 .product-card img {
-    width: 60px !important;
-    height: 80px !important;
+    width: 70px; /* პატარა ზომა, როგორც ფოტოზეა */
+    height: 90px;
     object-fit: contain;
 }
 
-/* ტექსტის სტილი ბარათში */
-.product-card h3 {
+.product-info h3 {
     font-size: 14px;
-    margin: 0;
-    color: #000;
+    margin: 0 0 5px 0;
 }
 
-.product-card .price {
-    color: #FF4D4D; /* წითელი ფასი */
+.product-info .price {
+    color: #ff4d4d;
     font-size: 14px;
     font-weight: bold;
-    margin: 5px 0;
     display: block;
+    margin-bottom: 10px;
 }
 
-/* ღილაკი "დეტალურად" */
-.product-card .details-btn {
-    background-color: #4AACE0;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-/* კალათის ჯამის სექცია (მარჯვნივ) */
+/* კალათის სექცია მარჯვნივ */
 .cart-summary {
-    background-color: #D9D9D9;
-    padding: 25px;
-    border-radius: 4px;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
 }
