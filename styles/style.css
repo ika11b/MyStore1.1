@@ -1,52 +1,48 @@
-body {
-    background-color: #f4f4f4;
-    margin: 0;
-    font-family: sans-serif;
-}
-
-.products h2 {
-    text-align: center;
-    margin: 40px 0;
-    font-size: 24px;
-}
-
+/* მთავარი კონტეინერი */
 .product-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 სვეტი */
+    grid-template-columns: repeat(3, 1fr); /* ზუსტად 3 სვეტი */
     gap: 30px;
-    max-width: 1100px;
+    padding: 40px 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
+/* პროდუქტის ბარათი */
 .product-card {
-    background: #e0e0e0;
-    padding: 20px;
-    border-radius: 15px;
+    background: #EAEAEA; /* Figma-ს ნაცრისფერი */
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .product-card img {
-    width: 150px;
-    height: 180px;
+    width: 100%;
+    max-width: 160px;
+    height: 200px;
     object-fit: contain;
     margin-bottom: 15px;
 }
 
 .product-card h3 {
-    font-size: 16px;
+    font-size: 1.1rem;
+    color: #333;
     margin: 10px 0;
+    min-height: 50px; /* რომ სახელები თანაბრად იყოს */
 }
 
 .product-card .price {
-    color: #ff4d4d;
+    color: #FF4D4D;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.product-card .rating {
-    font-size: 12px;
-    color: #666;
     margin-bottom: 15px;
 }
