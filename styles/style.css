@@ -1,72 +1,56 @@
-/* კალათის გვერდის პროდუქტების სექცია */
 .main-container {
     display: flex !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    max-width: 1200px !important;
-    margin: 40px auto !important;
-    align-items: flex-start !important;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* პროდუქტების ბადე - 2 სვეტი როგორც ფიგმაშია */
 #product-container.product-cards {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important;
-    flex: 2 !important;
+    gap: 15px;
+    width: 60%;
 }
 
-/* პროდუქტის ბარათი */
 .product-card {
     background-color: #D9D9D9 !important; /* ნაცრისფერი ფონი */
-    border-radius: 4px !important;
-    padding: 12px !important;
     display: flex !important;
-    flex-direction: row !important; /* ფოტო მარცხნივ, ტექსტი მარჯვნივ */
-    align-items: center !important;
-    gap: 15px !important;
-    border: none !important;
+    flex-direction: row !important; /* ტექსტი ფოტოს გვერდით */
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    gap: 15px;
 }
 
-/* ფოტოს ზომა */
 .product-card img {
     width: 60px !important;
     height: 80px !important;
-    object-fit: contain !important;
-    margin: 0 !important;
+    object-fit: contain;
 }
 
-/* ფერები და ფონტები */
 .product-card h3 {
-    font-size: 14px !important;
-    margin: 0 !important;
-    color: #000 !important;
+    font-size: 14px;
+    margin: 0;
+    color: #000;
 }
 
 .product-card .price {
     color: #FF4D4D !important; /* წითელი ფასი */
-    font-size: 14px !important;
-    font-weight: bold !important;
-    margin: 4px 0 !important;
-    display: block !important;
+    font-weight: bold;
 }
 
-/* ლურჯი ღილაკი */
 .details-btn {
-    background-color: #4AACE0 !important;
-    color: #fff !important;
-    border: none !important;
-    padding: 6px 12px !important;
-    border-radius: 4px !important;
-    font-size: 12px !important;
-    cursor: pointer !important;
+    background-color: #4AACE0;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-/* კალათის სექცია მარჯვნივ */
 .cart-summary {
-    background-color: #D9D9D9 !important;
-    padding: 20px !important;
-    border-radius: 4px !important;
-    flex: 1 !important;
-    min-width: 280px !important;
+    background-color: #D9D9D9;
+    padding: 20px;
+    width: 30%;
+    border-radius: 5px;
 }
