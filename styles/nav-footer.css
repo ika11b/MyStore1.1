@@ -1,67 +1,48 @@
-/* Header - Figma-ს სტილი */
 header {
-    background-color: #0b0b0b; /* სუფთა შავი */
-    padding: 15px 0;
+    background-color: #000 !important;
+    padding: 20px 0;
     width: 100%;
 }
-
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
-
 .logo a {
-    color: #ffffff;
+    color: #fff !important;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    font-family: Arial, sans-serif;
 }
-
 #nav-list {
     display: flex;
     list-style: none;
-    gap: 25px;
-    align-items: center;
+    gap: 30px;
 }
-
 #nav-list a {
-    color: #ffffff;
+    color: #fff !important;
     text-decoration: none;
-    font-size: 16px;
 }
-
-/* Footer - Figma-ს სტილი */
 footer {
-    background-color: #0b0b0b;
-    color: #ffffff;
-    padding: 50px 0;
+    background-color: #000 !important;
+    color: #fff;
+    padding: 60px 0;
     text-align: center;
-    margin-top: 50px;
 }
-
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 25px;
+    gap: 50px;
+    margin-bottom: 30px;
 }
-
 .social-link {
-    color: #ffffff;
+    color: #fff !important;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.contact-info p {
-    color: #999;
-    font-size: 14px;
-    margin: 5px 0;
+    gap: 15px;
 }
