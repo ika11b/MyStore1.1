@@ -1,4 +1,3 @@
-/* ეს არი სურვილების სიაში დამატების ღილაკის სტილი */
 .button {
     width: 100%;
     background-color: #3498db;
@@ -16,11 +15,10 @@
     background-color: #2980b9;
 }
 
-.button:active{
+.button:active {
     background-color: #216fa3;
 }
 
-/* ეს შემოთავაზებული პროდუქტების ღილაკის სტილი */
 .related-product button {
     width: 100%;
     background-color: #3498db;
@@ -43,7 +41,6 @@
     background-color: #216fa3;
 }
 
-/* ეს მთავარი გვერდის ღილაკების */
 .product-card .button {
     background-color: #3498db;
     color: #fff;
@@ -54,11 +51,11 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-  
+
 .product-card .button:hover {
     background-color: #2980b9;
 }
-  
+
 .product-card .button:active {
     background-color: #216fa3;
 }
