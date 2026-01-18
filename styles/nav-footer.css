@@ -1,9 +1,10 @@
+/* --- HEADER STYLES --- */
 header {
-    background-color: #000 !important;
+    background-color: #000 !important; /* შავი ფონი */
     padding: 15px 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* ცენტრავს კონტეინერს */
+    justify-content: center;
 }
 
 header .container {
@@ -36,10 +37,88 @@ header .container {
     text-decoration: none;
     font-size: 16px;
     font-family: sans-serif;
+    transition: 0.3s;
+}
+
+#nav-list a:hover {
+    color: #4AACE0 !important; /* ჰოვერზე ცისფერი */
 }
 
 /* კალათის ხატულის ფერი */
 .cart-link img {
     filter: invert(1);
     vertical-align: middle;
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 60px 0 40px 0;
+    text-align: center;
+    margin-top: 80px;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* დაშორება სოციალურ ქსელებს შორის */
+    margin-bottom: 30px;
+}
+
+.social-link {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* სოციალური ხატულების გათეთრება */
+.social-link img {
+    filter: invert(1);
+    vertical-align: middle;
+}
+
+.contact-info {
+    margin-top: 20px;
+    border-top: 1px solid #333; /* გამყოფი ხაზი */
+    padding-top: 25px;
+}
+
+.contact-info p {
+    color: #bbb;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.contact-info span {
+    color: #4AACE0; /* მეილის ფერი */
+    font-weight: bold;
+}
+
+/* --- BURGER MENU (მობილურისთვის) --- */
+.burger-menu {
+    display: none; /* დესკტოპზე დამალულია */
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    #nav-list {
+        display: none; /* აქ JavaScript დაგჭირდება გამოსაჩენად */
+    }
 }
