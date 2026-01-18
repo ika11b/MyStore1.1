@@ -1,15 +1,27 @@
+/* Product Info Page Responsiveness */
+
 @media (max-width: 1024px) {
     .product-page {
         flex-direction: column;
+        padding: 20px;
     }
 
     .product-image {
         width: 100%;
         height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-image img {
+        max-width: 400px;
+        width: 100%;
     }
 
     .product-info {
+        margin: 20px 0;
         padding: 20px;
+        flex: none;
     }
 
     .related-products {
@@ -18,18 +30,19 @@
         justify-content: center;
         margin-left: 0;
         padding: 20px;
+        gap: 15px;
     }
 
     .related-product {
-        width: calc(50% - 10px);
-        margin: 10px;
+        width: calc(50% - 20px);
+        margin: 0;
         flex-direction: column;
         align-items: center;
     }
 
     .related-product img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     .product-info select {
@@ -39,87 +52,44 @@
 
 @media (max-width: 768px) {
     .product-page {
-        flex-direction: column;
-        /* margin: 20px; */
-    }
-
-    .product-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .product-info {
-        margin: 20px 0;
         padding: 10px;
     }
 
-    .related-products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 0;
-        padding: 20px;
+    .product-info h1 {
+        font-size: 1.5rem;
     }
 
     .related-product {
-        width: calc(50% - 10px);
-        margin: 10px;
-        flex-direction: column;
-        align-items: center;
+        width: calc(50% - 15px);
     }
 
     .related-product img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (max-width: 480px) {
-    .product-page {
-        flex-direction: column;
-        /* margin: 10px; */
-    }
-
-    .product-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .product-info {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    .product-page {
-        flex-direction: column;
-        margin: 0;
+    .product-image img {
+        max-width: 100%;
     }
 
     .related-products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 0;
-        padding: 20px;
+        padding: 10px;
     }
 
     .related-product {
         width: 100%;
         margin: 10px 0;
-        flex-direction: column;
-        align-items: center;
     }
 
     .related-product button {
-        width: 170px;
+        width: 100%;
+        max-width: 200px;
     }
 
     .related-product img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .product-info select {
-        width: 100%;
+        width: 80px;
+        height: 80px;
     }
 }
