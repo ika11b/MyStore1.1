@@ -1,70 +1,46 @@
-/* --- Header-ის დაბრუნება (პირველი ფოტოს მიხედვით) --- */
 header {
-    background-color: #ffffff !important; /* თეთრი ფონი */
-    padding: 20px 0;
+    background-color: #ffffff !important;
+    padding: 15px 0;
     width: 100%;
-    border-bottom: 1px solid #eaeaea;
 }
 
 header .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* MyStore მარცხნივ, მენიუ მარჯვნივ */
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
 
 .logo a {
-    color: #000000 !important; /* შავი ლოგო */
-    font-size: 24px;
+    color: #000000 !important;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
 }
 
 #nav-list {
-    display: flex !important; /* ელემენტები ერთ ხაზზე */
+    display: flex !important;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
 #nav-list a {
-    color: #000000 !important; /* შავი ტექსტი */
+    color: #000000 !important;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 16px;
 }
 
-/* კალათის ხატულა (შავი, რადგან ფონი თეთრია) */
 .cart-link img {
-    filter: none !important; /* ფილტრის მოხსნა, რომ შავი დარჩეს */
-    vertical-align: middle;
+    filter: none !important; /* ხატულა დარჩება შავი */
 }
 
-/* --- Footer (შავი დარჩეს როგორც ფიგმაშია) --- */
 footer {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-}
-
-.social-link {
+    background-color: #000 !important;
     color: #fff !important;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.social-link img {
-    filter: invert(1);
+    padding: 30px 0;
+    text-align: center;
 }
