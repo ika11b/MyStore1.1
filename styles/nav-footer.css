@@ -1,12 +1,23 @@
-header, footer {
+/* შავი ჰედერი */
+header {
     background-color: #000 !important;
-    color: #fff !important;
+    padding: 15px 0;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 #nav-list {
-    display: flex !important;
-    gap: 20px;
+    display: flex !important; /* ელემენტები ერთ ხაზზე */
     list-style: none;
+    gap: 25px;
+    margin: 0;
 }
 
 #nav-list a {
@@ -14,8 +25,29 @@ header, footer {
     text-decoration: none;
 }
 
+/* შავი ფუტერი */
+footer {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 40px 0;
+    text-align: center;
+}
+
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    color: #fff !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-link img, .cart-link img {
+    filter: invert(1); /* ხატულების გათეთრება */
 }
