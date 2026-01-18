@@ -1,0 +1,280 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+  
+body {
+    line-height: 1.6;
+    background-color: white;
+    color: #333;
+}
+
+/* ფერები დარქ მოუდის და ისე */
+:root {
+    --foni-divis: #e4e4e4; 
+    --foni: #e0e0e0;
+    --textis-feri: black;
+    --borderis-feri: #b3b2b2;
+}
+
+.dark-theme {
+    --foni: black;
+    --foni-divis: #333;
+    --textis-feri: white;
+    --borderis-feri: #333;
+}
+
+.parent {
+    display: flex;
+    align-items: start;
+    background-color: var(--foni);
+}
+
+.related-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 25px 25px 60px 0;
+    width: 400px;
+    flex: 1;
+}
+
+.related-product {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin: 20px 40px;
+    border: 1px solid var(--borderis-feri);
+    border-radius: 5px;
+    background-color: var(--foni-divis);
+}
+
+.related-product:hover {
+    transition: 0.4s ease;
+    opacity: 0.8;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.related-product img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+.related-product div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.related-product p {
+    margin-bottom: 5px;
+}
+
+/* ღილაკი */
+
+.related-product button {
+    width: auto;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.related-product button:hover {
+    background-color: #2980b9;
+}
+
+.related-product button:active {
+    background-color: #216fa3;
+}
+
+h3 {
+    align-items: end;
+    font-size: 1.3rem;
+    font-weight: bold;
+    /* margin: 100px 50px 0 50px; */
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    background-color: var(--foni);
+    color: var(--textis-feri);
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+/* კალათის სტილები */
+.cart {
+    margin: 50px ;
+    padding: 20px;
+    border: 1px solid var(--borderis-feri);
+    background-color: var(--foni-divis);
+    width: 100%;
+    max-height: 600px;
+    overflow: scroll;
+    right: 10px;
+}
+
+.cart h2 {
+    color: var(--textis-feri);
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--foni-divis);
+    border: 1px solid grey;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cart-item .item-info {
+    flex: 1;
+}
+
+.cart-item button {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    width: auto;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+.cart-item button:hover {
+    background-color: #2980b9;
+}
+
+.cart-item button:active {
+    background-color: #216fa3;
+}
+
+#cart-total {
+    font-weight: bold;
+    color: var(--textis-feri);
+}
+
+.product-name {
+    color: var(--textis-feri);
+}
+
+@media (max-width: 1024px) {
+    .parent {
+        flex-direction: column;
+    }
+
+    .related-products {
+        margin: 10px;
+        /* margin-left: 50px; */
+        width: 95%;
+    }
+
+    .related-product {
+        width: 95%;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.5rem;
+    }
+
+    .cart {
+        width: 90%;
+    }
+
+    .related-product button {
+        width: 250px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+    }
+
+    .related-products {
+        margin: 0 40px;
+        width: 90%;
+    }
+
+    .related-product {
+        width: 90%;
+        padding: 7px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .cart {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .parent {
+        flex-direction: column;
+    }
+
+    .related-products {
+        /* margin: 10px; */
+        /* margin-left: 20px; */
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        margin: 0 12px;
+    }
+
+    .related-product {
+        width: 85%;
+        padding: 7px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
+        margin-right: 12px;
+    }
+
+    .cart {
+        width: 80%;
+    }
+
+    .related-product img {
+        width: 135px;
+        height: 135px;
+    }
+
+    .related-product button {
+        width: 110px;
+    }
+}

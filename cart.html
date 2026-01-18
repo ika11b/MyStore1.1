@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles/nav-footer.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <script src="script/dark-theme.js" defer></script>
+    <script src="script/cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">MyStore</a>
+            </div>
+            <nav>
+            <div class="lang">🌐
+                <select name="" id="language-select">
+                    <option value="geo">ქართულად</option><hr>
+                    <option value="en">English</option><hr>
+                    <option value="chi">中國人</option>
+                </select>
+            </div>
+            <img src="svg/moon-solid.svg" alt="sun" id="icon">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="cart.html">Cart <img src="svg/cart-shopping-solid.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h3>ღილაკზე დაკლიკებით მოათავსე დანამატი კალათაში </h3>
+    <div class="parent">
+        <div class="related-products">
+            <div class="related-product" id="product-1" data-id="1" data-name="ომეგა 3" data-price="99.99₾" data-img="product-pictures/Omega3.jpg">
+                <img src="product-pictures/Omega3.jpg" alt="Product 1">
+                <div>
+                    <p class="product-name">ომეგა 3</p>
+                    <p class="price">99.99₾</p>
+                    <button class="add-to-cart-btn">დამატება</button>
+                </div>
+            </div>
+            <div class="related-product" id="product-2" data-id="2" data-name="კრეატინი" data-price="149.99₾" data-img="product-pictures/creatine.png">
+                <img src="product-pictures/creatine.png" alt="Product 2">
+                <div>
+                    <p class="product-name">კრეატინი</p>
+                    <p class="price">149.99₾</p>
+                    <button class="add-to-cart-btn">დამატება</button>
+                </div>
+            </div>
+            <div class="related-product" id="product-3" data-id="3" data-name="ბისიეი/BCAA" data-price="89.99₾" data-img="product-pictures/bcaa.jpg">
+                <img src="product-pictures/bcaa.jpg" alt="Product 3">
+                <div>
+                    <p class="product-name">ბისიეი/BCAA</p>
+                    <p class="price">89.99₾</p>
+                    <button class="add-to-cart-btn">დამატება</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="related-products">
+            <div class="related-product" id="product-4" data-id="4" data-name="MK-677" data-price="399.99₾" data-img="product-pictures/MK677.jpg">
+                <img src="product-pictures/MK677.jpg" alt="Product 4">
+                <div>
+                    <p class="product-name">MK-677</p>
+                    <p class="price">399.99₾</p>
+                    <button class="add-to-cart-btn">დამატება</button>
+                </div>
+            </div>
+            <div class="related-product" id="product-5" data-id="5" data-name="თურქესტერონი" data-price="109.99₾" data-img="product-pictures/turkesterone.jpg">
+                <img src="product-pictures/turkesterone.jpg" alt="Product 5">
+                <div>
+                    <p class="product-name">თურქესტერონი</p>
+                    <p class="price">109.99₾</p>
+                    <button class="add-to-cart-btn">დამატება</button>
+                </div>
+            </div>
+            <div class="related-product" id="product-6" data-id="6" data-name="გლუტამინი" data-price="99.99₾" data-img="product-pictures/glutamine.jpg">
+                <img src="product-pictures/glutamine.jpg" alt="Product 6">
+                <div>
+                    <p class="product-name">გლუტამინი</p>
+                    <p class="price">99.99₾</p>
+                    <button class="add-to-cart-btn">დამატება</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart">
+            <h2>კალათა</h2>
+            <div id="cart-items"></div>
+            <hr>
+            <div class="total" id="cart-total">ჯამი: 0₾</div>
+        </div>
+
+    </div>
+   
+
+    <footer id="Contact">
+        <div class="container">
+            <div class="social-media">
+                <a href="#" class="social-link">
+                    <img src="svg/facebook-brands-solid.svg" alt="Facebook" class="footer-img">
+                    Facebook
+                </a>
+                <a href="#" class="social-link">
+                    <img src="svg/instagram-brands-solid (1).svg" alt="Instagram" class="footer-img">
+                    Instagram
+                </a>
+                <a href="#" class="social-link">
+                    <img src="svg/x-twitter-brands-solid (2).svg" alt="Twitter" class="footer-img">
+                    Twitter
+                </a>
+            </div>
+            <p >Contact us: <span>OnlineMaghazia@gmail.com</span></p>
+            <p>&copy; 2024 Online Store. All rights reserved.</p>
+        </div>      
+    </footer>
+</body>
+</html>

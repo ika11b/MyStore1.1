@@ -1,0 +1,137 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* ფერები დარქ მოუდის და ისე */
+:root {
+    --foni-divis: #e4e4e4; 
+    --foni: #e0e0e0;
+    --textis-feri: black;
+    --borderis-feri: #b3b2b2;
+}
+
+.dark-theme {
+    --foni: black;
+    --foni-divis: #333;
+    --textis-feri: white;
+    --borderis-feri: #333;
+}
+
+/* Container for content */
+
+.main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+  
+  /* Main Section - Product Cards */
+.products {
+    padding: 50px 0;
+    background-color: var(--foni);
+
+}
+  
+.products h2 {
+    text-align: center;
+    margin: 32px;
+    font-size: 28px;
+    color: var(--textis-feri);
+}
+  
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+    justify-content: space-between;
+    gap: 20px;
+}
+ 
+
+
+.product-card {
+    background-color: var(--foni-divis);
+    padding: 20px;
+    border: 1px solid var(--borderis-feri);
+    border-radius: 8px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+  
+.product-card:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+    transition: 0.7s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+  
+.product-card img {
+    width: 80%;
+    height: auto;
+}
+  
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--textis-feri);
+
+}
+  
+.product-card .price {
+    font-size: 20px;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+  
+.product-card .rating {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--textis-feri);
+}
+
+/* რესპონსივი */
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% - 20px);
+    }
+
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products h2 {
+        font-size: 20px;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card .price {
+        font-size: 18px;
+    }
+
+    .product-card .rating {
+        font-size: 12px;
+    }
+
+    .product-card img {
+        width: 100%;
+    }
+}
