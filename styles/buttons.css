@@ -1,47 +1,23 @@
-/* ზოგადი ღილაკის სტილი */
 .button {
-    width: 100%;
-    background-color: #3498db;
-    color: #fff;
+    background-color: #4AACE0; /* Figma-ს ცისფერი */
+    color: #ffffff;
     border: none;
-    font-size: 1rem;
+    border-radius: 4px;
+    padding: 12px 0;
+    width: 100%;
     font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+    display: block;
     text-decoration: none;
 }
 
 .button:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
+    background-color: #358DBA;
 }
 
 .button:active {
     background-color: #216fa3;
-    transform: translateY(0);
-}
-
-/* პროდუქტის ბარათის შიგნით არსებული ღილაკი */
-.product-card .button {
-    margin-top: 15px;
-}
-
-/* მსგავსი პროდუქტების ღილაკი */
-.related-product button {
-    width: auto;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.related-product button:hover {
-    background-color: #2980b9;
 }
