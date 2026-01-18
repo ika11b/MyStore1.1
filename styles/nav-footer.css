@@ -1,21 +1,70 @@
-header, footer {
+/* --- Header გასწორება --- */
+header {
     background-color: #000 !important;
-    color: #fff !important;
+    padding: 15px 0;
+    width: 100%;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* ლოგო მარცხნივ, მენიუ მარჯვნივ */
+    align-items: center;
+    padding: 0 20px;
 }
 
 #nav-list {
-    display: flex !important;
-    gap: 20px;
+    display: flex !important; /* აიძულებს გვერდიგვერდ დგომას */
+    flex-direction: row !important;
     list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 #nav-list a {
     color: #fff !important;
     text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.cart-link img {
+    filter: invert(1);
+    vertical-align: middle;
+}
+
+/* --- Footer გასწორება --- */
+footer {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 80px;
 }
 
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.social-link {
+    color: #fff !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-link img {
+    filter: invert(1);
+}
+
+.contact-info p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 5px 0;
 }
