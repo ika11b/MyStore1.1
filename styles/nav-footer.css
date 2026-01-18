@@ -1,65 +1,46 @@
-/* Header */
+/* ჰედერის შავი ფონი */
 header {
     background-color: #000 !important;
-    padding: 20px 0;
-    width: 100%;
+    padding: 15px 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo a {
+.logo a, #nav-list a {
     color: #fff !important;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
 }
 
-#nav-list {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin: 0;
-}
-
-#nav-list a {
-    color: #fff !important;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Footer */
+/* ფუტერის სრული სტილი */
 footer {
     background-color: #000 !important;
     color: #fff !important;
-    padding: 60px 0;
+    padding: 40px 0;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .social-media {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .social-link {
     color: #fff !important;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* ხატულების გათეთრება */
+.social-link img {
+    filter: invert(1); 
+}
+
 .contact-info p {
-    color: #bbb;
-    font-size: 14px;
+    font-size: 13px;
+    color: #ccc;
+    margin: 5px 0;
 }
