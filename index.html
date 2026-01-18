@@ -3,132 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Store</title>
+  <title>Online Store - Final Project</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/nav-footer.css">
   <link rel="stylesheet" href="styles/buttons.css">
-  </head>
+  <script src="script/fetch-products.js" defer></script>
+</head>
 <body>
 
-<header>
+<header id="main-header">
 <div class="container">
     <div class="logo">
         <a href="index.html">MyStore</a>
     </div>
+    
     <nav>
-        <ul>
+        <div class="burger-menu" id="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul id="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="#Contact">Contact</a></li>
-            <li><a href="cart.html">Cart <img src="svg/cart-shopping-solid.svg" alt=""></a></li>
+            <li><a href="cart.html" class="cart-link">Cart <img src="svg/cart-shopping-solid.svg" alt="cart"></a></li>
         </ul>
     </nav>
 </div>
 </header>
 
-<section class="products">
-<div class="main">
-    <h2>პოპულარული პროდუქცია</h2>
-    <div class="product-cards">
-    
-    <article class="product-card">
-        <img src="product-pictures/Omega3.jpg" alt="Product 1">
-        <h3>თევზის ქონი</h3>
-        <p class="price">99.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (120 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/creatine.png" alt="Product 2">
-        <h3>კრეატინ მონოჰიდრატი</h3>
-        <p class="price">149.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (98 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/MK677.jpg" alt="Product 3">
-        <h3>ემქეი-677 SARMS</h3>
-        <p class="price">399.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (75 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/turkesterone.jpg" alt="Product 4">
-        <h3>თურქესტერონი (ტესტ ბუსტერი)</h3>
-        <p class="price">109.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (63 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/glutamine.jpg" alt="Product 5">
-        <h3>გლუტამინი</h3>
-        <p class="price">99.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (150 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/bcaa.jpg" alt="Product 6">
-        <h3>ბისიეი</h3>
-        <p class="price">89.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (50 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/Omega3.jpg" alt="Product 1">
-        <h3>თევზის ქონი</h3>
-        <p class="price">99.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (120 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/creatine.png" alt="Product 2">
-        <h3>კრეატინ მონოჰიდრატი</h3>
-        <p class="price">149.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (98 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/MK677.jpg" alt="Product 3">
-        <h3>ემქეი-677 SARMS</h3>
-        <p class="price">399.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (75 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/turkesterone.jpg" alt="Product 4">
-        <h3>თურქესტერონი (ტესტ ბუსტერი)</h3>
-        <p class="price">109.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (63 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/glutamine.jpg" alt="Product 5">
-        <h3>გლუტამინი</h3>
-        <p class="price">99.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (150 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    <article class="product-card">
-        <img src="product-pictures/bcaa.jpg" alt="Product 6">
-        <h3>ბისიეი</h3>
-        <p class="price">89.99₾</p>
-        <p class="rating">⭐⭐⭐⭐☆ (50 შეფასება)</p>
-        <button class="button" style="cursor: default; opacity: 0.8;">დეტალურად</button>
-    </article>
-
-    </div>
-</div>
-</section>
+<main>
+    <section class="products">
+        <div class="main-container">
+            <h2>პოპულარული პროდუქცია</h2>
+            
+            <div id="product-container" class="product-cards">
+                <p>Loading products...</p>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer id="Contact">
 <div class="container">
@@ -150,5 +65,6 @@
     <p>&copy; 2024 Online Store. All rights reserved.</p>
 </div>      
 </footer>
+
 </body>
 </html>
