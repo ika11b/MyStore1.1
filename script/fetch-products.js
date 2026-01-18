@@ -1,7 +1,6 @@
 async function loadProducts() {
     const container = document.getElementById('product-container');
     try {
-        // წერტილი და დახრილი ხაზი მნიშვნელოვანია GitHub-ისთვის
         const response = await fetch('./products.json'); 
         
         if (!response.ok) {
@@ -31,7 +30,6 @@ async function loadProducts() {
     }
 }
 
-// ბურგერ მენიუს ლოგიკა - დავამატოთ შემოწმება, რომ სხვა გვერდებზე შეცდომა არ ამოაგდოს
 const burgerIcon = document.getElementById('burger-icon');
 const navList = document.getElementById('nav-list');
 
@@ -41,7 +39,6 @@ if (burgerIcon && navList) {
     });
 }
 
-// Sticky Header
 window.onscroll = function() {
     const header = document.getElementById("main-header");
     if (header) {
