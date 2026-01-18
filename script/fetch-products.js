@@ -1,16 +1,21 @@
 async function loadProducts() {
     const container = document.getElementById('product-container');
     try {
-        // fetch ეძებს products.json-ს მთავარ ფოლდერში
+        // წერტილი და დახრილი ხაზი მნიშვნელოვანია GitHub-ისთვის
         const response = await fetch('./products.json'); 
+        
+        if (!response.ok) {
+            throw new Error('JSON ფაილი ვერ მოიძებნა');
+        }
+
         const products = await response.json();
 
         if (container) {
-            container.innerHTML = ''; // Loading ტექსტის წაშლა
+            container.innerHTML = ''; 
             products.forEach(product => {
                 const card = `
                     <article class="product-card">
-                        <img src="${product.image}" alt="${product.name}">
+                        <img src="./${product.image}" alt="${product.name}">
                         <h3>${product.name}</h3>
                         <p class="price">${product.price}</p>
                         <p class="rating">${product.rating}</p>
@@ -26,18 +31,25 @@ async function loadProducts() {
     }
 }
 
-// ბურგერ მენიუს ლოგიკა
-document.getElementById('burger-icon')?.addEventListener('click', () => {
-    document.getElementById('nav-list').classList.toggle('show');
-});
+// ბურგერ მენიუს ლოგიკა - დავამატოთ შემოწმება, რომ სხვა გვერდებზე შეცდომა არ ამოაგდოს
+const burgerIcon = document.getElementById('burger-icon');
+const navList = document.getElementById('nav-list');
+
+if (burgerIcon && navList) {
+    burgerIcon.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+}
 
 // Sticky Header
 window.onscroll = function() {
     const header = document.getElementById("main-header");
-    if (window.pageYOffset > 50) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
+    if (header) {
+        if (window.pageYOffset > 50) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
     }
 };
 
