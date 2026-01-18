@@ -1,28 +1,27 @@
-/* --- Header გასწორება --- */
 /* შავი ჰედერი */
+/* --- Header --- */
 header {
     background-color: #000 !important;
     padding: 15px 0;
-    width: 100%;
+    padding: 20px 0;
 }
 
 header .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* ლოგო მარცხნივ, მენიუ მარჯვნივ */
     justify-content: space-between;
+    justify-content: space-between; /* MyStore მარცხნივ, მენიუ მარჯვნივ */
     align-items: center;
     padding: 0 20px;
 }
 
 #nav-list {
-    display: flex !important; /* აიძულებს გვერდიგვერდ დგომას */
-    flex-direction: row !important;
     display: flex !important; /* ელემენტები ერთ ხაზზე */
+    display: flex !important; /* აიძულებს გვერდიგვერდ დგომას */
     list-style: none;
-    gap: 30px;
     gap: 25px;
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
@@ -30,22 +29,23 @@ header .container {
 #nav-list a {
     color: #fff !important;
     text-decoration: none;
-    font-size: 16px;
-    font-family: sans-serif;
+    font-weight: 500;
 }
 
+/* შავი ფუტერი */
+/* კალათის ხატულა */
 .cart-link img {
     filter: invert(1);
     vertical-align: middle;
+    margin-left: 5px;
 }
 
-/* --- Footer გასწორება --- */
-/* შავი ფუტერი */
+/* --- Footer --- */
 footer {
     background-color: #000 !important;
     color: #fff !important;
-    padding: 50px 0;
     padding: 40px 0;
+    padding: 50px 0 30px 0;
     text-align: center;
     margin-top: 80px;
 }
@@ -54,23 +54,29 @@ footer {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-bottom: 25px;
     margin-bottom: 20px;
+    gap: 50px;
+    margin-bottom: 30px;
 }
 
 .social-link {
-@@ -59,12 +48,6 @@ footer {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
     gap: 10px;
+    gap: 15px;
 }
 
+.social-link img, .cart-link img {
 .social-link img {
-    filter: invert(1);
+    filter: invert(1); /* ხატულების გათეთრება */
+    width: 28px;
 }
 
 .contact-info p {
-    color: #bbb;
+    color: #ccc;
     font-size: 14px;
     margin: 5px 0;
-.social-link img, .cart-link img {
-    filter: invert(1); /* ხატულების გათეთრება */
 }
