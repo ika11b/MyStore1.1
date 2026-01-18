@@ -1,4 +1,6 @@
+@@ -1,54 +1,43 @@
 /* --- Header გასწორება --- */
+/* შავი ჰედერი */
 header {
     background-color: #000 !important;
     padding: 15px 0;
@@ -10,6 +12,7 @@ header .container {
     margin: 0 auto;
     display: flex;
     justify-content: space-between; /* ლოგო მარცხნივ, მენიუ მარჯვნივ */
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
@@ -17,8 +20,10 @@ header .container {
 #nav-list {
     display: flex !important; /* აიძულებს გვერდიგვერდ დგომას */
     flex-direction: row !important;
+    display: flex !important; /* ელემენტები ერთ ხაზზე */
     list-style: none;
     gap: 30px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
@@ -36,10 +41,12 @@ header .container {
 }
 
 /* --- Footer გასწორება --- */
+/* შავი ფუტერი */
 footer {
     background-color: #000 !important;
     color: #fff !important;
     padding: 50px 0;
+    padding: 40px 0;
     text-align: center;
     margin-top: 80px;
 }
@@ -49,13 +56,11 @@ footer {
     justify-content: center;
     gap: 40px;
     margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .social-link {
-    color: #fff !important;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+@@ -59,12 +48,6 @@ footer {
     gap: 10px;
 }
 
@@ -67,4 +72,6 @@ footer {
     color: #bbb;
     font-size: 14px;
     margin: 5px 0;
+.social-link img, .cart-link img {
+    filter: invert(1); /* ხატულების გათეთრება */
 }
